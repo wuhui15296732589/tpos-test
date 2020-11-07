@@ -43,6 +43,11 @@ def customer_name():
     name = __first_name() + __second_name() + __last_name()
     return name
 
+#随机生成商户公司名称
+def customer_name_company():
+    str = '有限责任公司'
+    return customer_name()+str
+
 #随机生成身份证号码
 def id_card_number():
     prefix = '14270319911017'
@@ -146,10 +151,10 @@ def payorderID():
 
 
 def URL():
-    url = "http://47.112.191.144:8180/"
+    url = "http://47.112.191.144:8180/tpos-api-web-srv/"
     return url
 
-def Pc_header():
+def Pc_head():
     '''
     pc端请求头
     :return:
@@ -164,7 +169,7 @@ def Pc_header():
     return header
 
 
-def App_header():
+def App_head():
     '''
     app请求头
     :return:
@@ -179,6 +184,13 @@ def App_header():
     return header
 
 
+def APP_headers():
+    headers = {'Content - Type': 'application / x - www - form - urlencoded;charset = utf - 8',
+    'Content - Length': '299',
+    'Host': '47.112.191.144: 8180',
+    'Connection': 'Keep - Alive',
+    'Accept - Encoding': 'gzip',
+    'User - Agent': 'okhttp / 3.10.0',}
 
 
 
