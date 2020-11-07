@@ -255,7 +255,7 @@ def add_bank_information(id,realname,idcard,bankmobile):
     :param bankmobile: 银行预留手机号
     :return:
     '''
-    sss = 9999
+    sss = 908
 
 
 
