@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+    <database name = "newsitetest">
+        <table name = "rs_member_wallet_bill">
+            <sql id = "select_member">
+                select * from rs_member_wallet_bill where member_id = %s
+            </sql>
+            <sql id = "delete_user">
+                delete * from rs_member_wallet_bill where member_id = %s
+            </sql>
+        </table>
+    </database>
+</page>
