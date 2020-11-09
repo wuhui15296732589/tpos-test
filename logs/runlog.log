@@ -969,3 +969,252 @@
 2020-11-08 02:49:14,657 customer_register.py[line:352] INFO data:{"HEAD": {"MAC": "F932E16F-D688-49FC-BC2B-D21A3A6A2C2B", "TYPE": "2", "VERSION": "100", "IP": "10.10.47.25", "TOKEN": "vqtQipq6K72Hw9NZf6DQor15cjcpQkXcw9Gxw6ZkulNrIRRQiLpTDOb6RZ4WlAR99ZQIFTEC1rGvbAJXmNzwCgMh40YOLEtunen+XgEjGHU=", "ACCOUNT_TYPE": "1"}, "BODY": {"mercAreaId": "5211", "accountType": "1", "mercCityId": "5210", "manageInfoPath": "http://10.88.133.156:8080/tpos-api-web-srv/api_078//mnt/realname/image/tpos/customer/2020/11/8/32/09aea386360d497a87ce87896a294df7.jpg", "type": "1", "merShortName": "\u6234\u566a\u6709\u9650\u8d23\u4efb\u516c\u53f8", "mccCode": "5462", "mercFullName": "\u6c6a\u532e\u6709\u9650\u8d23\u4efb\u516c\u53f8", "whetherBusiness": "2", "id": 32, "mercAddress": "\u9655\u897f\u7701\u897f\u5b89\u5e02\u5e94\u4eba\u77f3\u6751", "mercProvId": "5200", "manageInfoState": "10"}}
 2020-11-08 02:49:14,776 customer_register.py[line:354] INFO respons:{"HEAD":{"MSG":"???????","CODE":"000"},"BODY":null}
 2020-11-08 02:49:14,776 customer_register.py[line:355] INFO ---------------------end:??????????---------------------
+2020-11-09 10:27:18,568 customer_register.py[line:65] INFO ----------------start:商户登录------------------------
+2020-11-09 10:27:18,625 customer_register.py[line:69] INFO 请求地址：http://47.112.191.144:8180/tpos-api-web-srv/api_004
+2020-11-09 10:27:18,664 customer_register.py[line:72] INFO 请求参数：{"HEAD": {"MAC": "F932E16F-D688-49FC-BC2B-D21A3A6A2C2B", "TYPE": "1", "VERSION": "100", "IP": "10.10.47.25", "TOKEN": "vqtQipq6K72Hw9NZf6DQoqnlGGub5U4qpZBCjQeal3Po+P7eYbwGmVR1yuxxDBbVE6xmrTGcWdWsUWNiSEWCFg==", "ACCOUNT_TYPE": "1"}, "BODY": {"password": "123456", "accountType": "1", "mobile": "15600000033"}}
+2020-11-09 10:27:18,998 customer_register.py[line:75] INFO ----------------end:返回值------------------------
+2020-11-09 10:27:18,999 customer_register.py[line:76] INFO {"HEAD":{"MSG":"操作成功","CODE":"000"},"BODY":{"customerInfo":{"customerId":32,"bindState":10,"authState":3,"bankState":10,"actnState":1,"examineState":2,"agreementState":1,"signTime":"20201027","policyId":0,"mobile":"15600000033","realName":"姜价魃","idCard":"142703199110178617","pendIncome":0,"depositAmount":null},"token":"vqtQipq6K72Hw9NZf6DQor15cjcpQkXcw9Gxw6ZkulNrIRRQiLpTDOb6RZ4WlAR99ZQIFTEC1rGvbAJXmNzwCq2TVChqBu5N3TKh1OgxPUE=","isVip":false,"isBuyVip":false}}
+2020-11-09 10:27:19,000 customer_register.py[line:83] INFO ----------------end:登录成功------------------------
+2020-11-09 10:27:19,000 customer_register.py[line:92] INFO ------start:上传身份证正面-----------
+2020-11-09 10:27:19,001 customer_register.py[line:108] INFO url:http://47.112.191.144:8180/tpos-api-web-srv/api_007
+2020-11-09 10:27:19,002 customer_register.py[line:109] INFO data:{"HEAD": {"MAC": "F932E16F-D688-49FC-BC2B-D21A3A6A2C2B", "TYPE": "1", "VERSION": "100", "IP": "10.10.47.25", "TOKEN": "vqtQipq6K72Hw9NZf6DQoqnlGGub5U4qpZBCjQeal3Po+P7eYbwGmVR1yuxxDBbVE6xmrTGcWdWsUWNiSEWCFg==", "ACCOUNT_TYPE": "1"}, "BODY": {"id": 32, "bizType": "idImg", "imageType": "1"}}
+2020-11-09 10:27:19,409 customer_register.py[line:114] INFO respons:{"HEAD":{"MSG":"操作成功","CODE":"000"},"BODY":{"imgPath":"http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/8a9ed9db03564e9ca0aed5263e8f0efb.jpg"}}
+2020-11-09 10:27:19,409 customer_register.py[line:117] INFO return:http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/8a9ed9db03564e9ca0aed5263e8f0efb.jpg
+2020-11-09 10:27:19,410 customer_register.py[line:118] INFO --------------------end:上传身份证正面----------------
+2020-11-09 10:27:19,410 customer_register.py[line:127] INFO ------start:上传身份证反面-----------
+2020-11-09 10:27:19,411 customer_register.py[line:141] INFO url:http://47.112.191.144:8180/tpos-api-web-srv/api_007
+2020-11-09 10:27:19,411 customer_register.py[line:142] INFO data:{"HEAD": {"MAC": "F932E16F-D688-49FC-BC2B-D21A3A6A2C2B", "TYPE": "1", "VERSION": "100", "IP": "10.10.47.25", "TOKEN": "vqtQipq6K72Hw9NZf6DQoqnlGGub5U4qpZBCjQeal3Po+P7eYbwGmVR1yuxxDBbVE6xmrTGcWdWsUWNiSEWCFg==", "ACCOUNT_TYPE": "1"}, "BODY": {"id": 32, "bizType": "idImg", "imageType": 2, "accountType": "1"}}
+2020-11-09 10:27:19,918 customer_register.py[line:146] INFO respons:{"HEAD":{"MSG":"操作成功","CODE":"000"},"BODY":{"imgPath":"http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/44891cb950b94f759a17dbcebc802ace.jpg"}}
+2020-11-09 10:27:19,918 customer_register.py[line:149] INFO return:http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/44891cb950b94f759a17dbcebc802ace.jpg
+2020-11-09 10:27:19,918 customer_register.py[line:150] INFO --------------------end:上传身份证反面----------------
+2020-11-09 10:27:19,918 customer_register.py[line:159] INFO ------start:上传手持身份证-----------
+2020-11-09 10:27:19,918 customer_register.py[line:173] INFO url:http://47.112.191.144:8180/tpos-api-web-srv/api_007
+2020-11-09 10:27:19,918 customer_register.py[line:174] INFO data:{"HEAD": {"MAC": "F932E16F-D688-49FC-BC2B-D21A3A6A2C2B", "TYPE": "1", "VERSION": "100", "IP": "10.10.47.25", "TOKEN": "vqtQipq6K72Hw9NZf6DQoqnlGGub5U4qpZBCjQeal3Po+P7eYbwGmVR1yuxxDBbVE6xmrTGcWdWsUWNiSEWCFg==", "ACCOUNT_TYPE": "1"}, "BODY": {"id": 32, "bizType": "idImg", "imageType": 3, "accountType": "1"}}
+2020-11-09 10:27:20,534 customer_register.py[line:177] INFO respons:{"HEAD":{"MSG":"操作成功","CODE":"000"},"BODY":{"imgPath":"http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/91795a99266843048fed0612329b6b85.jpg"}}
+2020-11-09 10:27:20,534 customer_register.py[line:180] INFO return:http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/91795a99266843048fed0612329b6b85.jpg
+2020-11-09 10:27:20,534 customer_register.py[line:181] INFO --------------------end:上传手持身份证----------------
+2020-11-09 10:27:20,534 customer_register.py[line:189] INFO ------start:身份信息确认-----------
+2020-11-09 10:27:20,570 customer_register.py[line:209] INFO url:http://47.112.191.144:8180/tpos-api-web-srv/api_161
+2020-11-09 10:27:20,570 customer_register.py[line:210] INFO requests:{"HEAD": {"MAC": "F932E16F-D688-49FC-BC2B-D21A3A6A2C2B", "TYPE": "2", "VERSION": "100", "IP": "10.10.47.25", "TOKEN": "vqtQipq6K72Hw9NZf6DQor15cjcpQkXcw9Gxw6ZkulNrIRRQiLpTDOb6RZ4WlAR99ZQIFTEC1rGvbAJXmNzwCq2TVChqBu5N3TKh1OgxPUE=", "ACCOUNT_TYPE": "1"}, "BODY": {"realName": "\u9b4f\u9606", "expiryDateEnd": "20391026", "address": "\u5c71\u897f\u7701\u6cb3\u6d25\u5e02\u4e16\u7eaa\u82b1\u56ed1\u5355\u5143101", "holdPath": "http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/91795a99266843048fed0612329b6b85.jpg", "frontPath": "http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/8a9ed9db03564e9ca0aed5263e8f0efb.jpg", "backPath": "http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/44891cb950b94f759a17dbcebc802ace.jpg", "idCard": "142703199110175799", "expiryDateBegin": "20191026", "id": 32}}
+2020-11-09 10:27:20,765 customer_register.py[line:212] INFO result:{"HEAD":{"MSG":"操作成功","CODE":"000"},"BODY":{"agreementState":1,"count":1}}
+2020-11-09 10:27:20,765 customer_register.py[line:214] INFO -----------------end:身份确认完成----------------
+2020-11-09 10:27:20,766 customer_register.py[line:228] INFO ------------------------start:银行卡图片上传---------------------
+2020-11-09 10:27:20,766 customer_register.py[line:239] INFO data:{"HEAD": {"MAC": "F932E16F-D688-49FC-BC2B-D21A3A6A2C2B", "TYPE": "1", "VERSION": "100", "IP": "10.10.47.25", "TOKEN": "vqtQipq6K72Hw9NZf6DQoqnlGGub5U4qpZBCjQeal3Po+P7eYbwGmVR1yuxxDBbVE6xmrTGcWdWsUWNiSEWCFg==", "ACCOUNT_TYPE": "1"}, "BODY": {"bizType": "stCard", "id": "vqtQipq6K72Hw9NZf6DQor15cjcpQkXcw9Gxw6ZkulNrIRRQiLpTDOb6RZ4WlAR99ZQIFTEC1rGvbAJXmNzwCq2TVChqBu5N3TKh1OgxPUE="}}
+2020-11-09 10:27:21,014 customer_register.py[line:245] INFO respons:{"HEAD":{"MSG":"操作成功","CODE":"000"},"BODY":{"imgPath":"http://10.88.133.156:8080/tpos-api-web-srv/api_078//mnt/realname/image/tpos/customer/2020/11/9/vqtQipq6K72Hw9NZf6DQor15cjcpQkXcw9Gxw6ZkulNrIRRQiLpTDOb6RZ4WlAR99ZQIFTEC1rGvbAJXmNzwCq2TVChqBu5N3TKh1OgxPUE=/570e5d3f49c04ad0903c7ac7c3026262.jpg"}}
+2020-11-09 10:27:21,014 customer_register.py[line:246] INFO ---------------------end:银行卡图片上传---------------------
+2020-11-09 10:27:21,015 customer_register.py[line:264] INFO ----------------------start：添加银行卡确认-------------------
+2020-11-09 10:27:21,015 customer_register.py[line:289] INFO data:{"HEAD": {"MAC": "F932E16F-D688-49FC-BC2B-D21A3A6A2C2B", "TYPE": "2", "VERSION": "100", "IP": "10.10.47.25", "TOKEN": "vqtQipq6K72Hw9NZf6DQor15cjcpQkXcw9Gxw6ZkulNrIRRQiLpTDOb6RZ4WlAR99ZQIFTEC1rGvbAJXmNzwCq2TVChqBu5N3TKh1OgxPUE=", "ACCOUNT_TYPE": "1"}, "BODY": {"code": "6666", "codeType": 3, "accountName": "\u9b4f\u9606", "idCard": "142703199110175799", "accountType": 1, "bankMobile": "15600000033", "type": "1", "realName": "\u9b4f\u9606", "isPublicAcc": "0", "bankbranchName": "\u4e2d\u56fd\u5efa\u8bbe\u94f6\u884c\u80a1\u4efd\u6709\u9650\u516c\u53f8\u5317\u4eac\u5e73\u8c37\u65b0\u5f00\u8857\u652f\u884c", "tposBankFrontPath": "http://10.88.133.156:8080/tpos-api-web-srv/api_078//mnt/realname/image/tpos/customer/2020/11/9/vqtQipq6K72Hw9NZf6DQor15cjcpQkXcw9Gxw6ZkulNrIRRQiLpTDOb6RZ4WlAR99ZQIFTEC1rGvbAJXmNzwCq2TVChqBu5N3TKh1OgxPUE=/570e5d3f49c04ad0903c7ac7c3026262.jpg", "id": 32, "account": "6217000360003082651", "paybankNo": "105100031442"}}
+2020-11-09 10:27:21,133 customer_register.py[line:291] INFO respons:{"HEAD":{"MSG":"操作成功","CODE":"000"},"BODY":{"bankState":10}}
+2020-11-09 10:27:21,133 customer_register.py[line:292] INFO ----------------end:添加银行卡确认-----------------------
+2020-11-09 10:27:21,133 customer_register.py[line:306] INFO ----------------start：确认函图片上传
+2020-11-09 10:27:21,133 customer_register.py[line:314] INFO respons:{"HEAD": {"MAC": "F932E16F-D688-49FC-BC2B-D21A3A6A2C2B", "TYPE": "2", "VERSION": "100", "IP": "10.10.47.25", "TOKEN": "vqtQipq6K72Hw9NZf6DQor15cjcpQkXcw9Gxw6ZkulNrIRRQiLpTDOb6RZ4WlAR99ZQIFTEC1rGvbAJXmNzwCq2TVChqBu5N3TKh1OgxPUE=", "ACCOUNT_TYPE": "1"}, "BODY": {"bizType": "csAuth", "accountType": "1", "id": 32, "imageType": "7"}}
+2020-11-09 10:27:22,399 customer_register.py[line:321] INFO respons:{"HEAD":{"MSG":"操作成功","CODE":"000"},"BODY":{"imgPath":"http://10.88.133.156:8080/tpos-api-web-srv/api_078//mnt/realname/image/tpos/customer/2020/11/9/32/c98238ad0b0a46ab8d4a1ed847971946.jpg"}}
+2020-11-09 10:27:22,399 customer_register.py[line:324] INFO ---------------------end:确认函图片上传---------------------
+2020-11-09 10:27:22,399 customer_register.py[line:325] INFO return:http://10.88.133.156:8080/tpos-api-web-srv/api_078//mnt/realname/image/tpos/customer/2020/11/9/32/c98238ad0b0a46ab8d4a1ed847971946.jpg
+2020-11-09 10:27:22,400 customer_register.py[line:331] INFO ----------------start:完善商户信息-------------------
+2020-11-09 10:27:22,400 customer_register.py[line:351] INFO data:{"HEAD": {"MAC": "F932E16F-D688-49FC-BC2B-D21A3A6A2C2B", "TYPE": "2", "VERSION": "100", "IP": "10.10.47.25", "TOKEN": "vqtQipq6K72Hw9NZf6DQor15cjcpQkXcw9Gxw6ZkulNrIRRQiLpTDOb6RZ4WlAR99ZQIFTEC1rGvbAJXmNzwCq2TVChqBu5N3TKh1OgxPUE=", "ACCOUNT_TYPE": "1"}, "BODY": {"mercAreaId": "5211", "accountType": "1", "mercCityId": "5210", "manageInfoPath": "http://10.88.133.156:8080/tpos-api-web-srv/api_078//mnt/realname/image/tpos/customer/2020/11/9/32/c98238ad0b0a46ab8d4a1ed847971946.jpg", "type": "1", "merShortName": "\u5e73\u6ec2\u6709\u9650\u8d23\u4efb\u516c\u53f8", "mccCode": "5462", "mercFullName": "\u6f58\u745f\u5196\u6709\u9650\u8d23\u4efb\u516c\u53f8", "whetherBusiness": "2", "id": 32, "mercAddress": "\u9655\u897f\u7701\u897f\u5b89\u5e02\u5e94\u4eba\u77f3\u6751", "mercProvId": "5200", "manageInfoState": "10"}}
+2020-11-09 10:27:22,527 customer_register.py[line:353] INFO respons:{"HEAD":{"MSG":"操作成功","CODE":"000"},"BODY":null}
+2020-11-09 10:27:22,527 customer_register.py[line:354] INFO ---------------------end:完善商户信息---------------------
+2020-11-09 10:27:22,527 customer_register.py[line:364] INFO -------------start：修改商户审核状态----------------------
+2020-11-09 10:27:22,528 customer_register.py[line:367] INFO 修改商户为：15600000033
+2020-11-09 10:28:02,487 customer_register.py[line:65] INFO ----------------start:商户登录------------------------
+2020-11-09 10:28:02,487 customer_register.py[line:69] INFO 请求地址：http://47.112.191.144:8180/tpos-api-web-srv/api_004
+2020-11-09 10:28:02,487 customer_register.py[line:72] INFO 请求参数：{"HEAD": {"MAC": "F932E16F-D688-49FC-BC2B-D21A3A6A2C2B", "TYPE": "1", "VERSION": "100", "IP": "10.10.47.25", "TOKEN": "vqtQipq6K72Hw9NZf6DQoqnlGGub5U4qpZBCjQeal3Po+P7eYbwGmVR1yuxxDBbVE6xmrTGcWdWsUWNiSEWCFg==", "ACCOUNT_TYPE": "1"}, "BODY": {"password": "123456", "accountType": "1", "mobile": "15600000033"}}
+2020-11-09 10:28:02,731 customer_register.py[line:75] INFO ----------------end:返回值------------------------
+2020-11-09 10:28:02,731 customer_register.py[line:76] INFO {"HEAD":{"MSG":"操作成功","CODE":"000"},"BODY":{"customerInfo":{"customerId":32,"bindState":10,"authState":3,"bankState":10,"actnState":1,"examineState":2,"agreementState":1,"signTime":"20201027","policyId":0,"mobile":"15600000033","realName":"魏阆","idCard":"142703199110175799","pendIncome":0,"depositAmount":null},"token":"vqtQipq6K72Hw9NZf6DQor15cjcpQkXcw9Gxw6ZkulNrIRRQiLpTDOb6RZ4WlAR99ZQIFTEC1rGvbAJXmNzwCq2TVChqBu5NnIhNel20LwE=","isVip":false,"isBuyVip":false}}
+2020-11-09 10:28:02,731 customer_register.py[line:83] INFO ----------------end:登录成功------------------------
+2020-11-09 10:28:02,731 customer_register.py[line:92] INFO ------start:上传身份证正面-----------
+2020-11-09 10:28:02,731 customer_register.py[line:108] INFO url:http://47.112.191.144:8180/tpos-api-web-srv/api_007
+2020-11-09 10:28:02,731 customer_register.py[line:109] INFO data:{"HEAD": {"MAC": "F932E16F-D688-49FC-BC2B-D21A3A6A2C2B", "TYPE": "1", "VERSION": "100", "IP": "10.10.47.25", "TOKEN": "vqtQipq6K72Hw9NZf6DQoqnlGGub5U4qpZBCjQeal3Po+P7eYbwGmVR1yuxxDBbVE6xmrTGcWdWsUWNiSEWCFg==", "ACCOUNT_TYPE": "1"}, "BODY": {"id": 32, "bizType": "idImg", "imageType": "1"}}
+2020-11-09 10:28:03,751 customer_register.py[line:114] INFO respons:{"HEAD":{"MSG":"操作成功","CODE":"000"},"BODY":{"imgPath":"http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/8ba4228ea5c94e6997d0e9da98c1edad.jpg"}}
+2020-11-09 10:28:03,752 customer_register.py[line:117] INFO return:http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/8ba4228ea5c94e6997d0e9da98c1edad.jpg
+2020-11-09 10:28:03,753 customer_register.py[line:118] INFO --------------------end:上传身份证正面----------------
+2020-11-09 10:28:03,753 customer_register.py[line:127] INFO ------start:上传身份证反面-----------
+2020-11-09 10:28:03,754 customer_register.py[line:141] INFO url:http://47.112.191.144:8180/tpos-api-web-srv/api_007
+2020-11-09 10:28:03,755 customer_register.py[line:142] INFO data:{"HEAD": {"MAC": "F932E16F-D688-49FC-BC2B-D21A3A6A2C2B", "TYPE": "1", "VERSION": "100", "IP": "10.10.47.25", "TOKEN": "vqtQipq6K72Hw9NZf6DQoqnlGGub5U4qpZBCjQeal3Po+P7eYbwGmVR1yuxxDBbVE6xmrTGcWdWsUWNiSEWCFg==", "ACCOUNT_TYPE": "1"}, "BODY": {"id": 32, "bizType": "idImg", "imageType": 2, "accountType": "1"}}
+2020-11-09 10:28:09,481 customer_register.py[line:146] INFO respons:{"HEAD":{"MSG":"操作成功","CODE":"000"},"BODY":{"imgPath":"http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/dbb1567aa4d94623a60e72b89664faaa.jpg"}}
+2020-11-09 10:28:09,482 customer_register.py[line:149] INFO return:http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/dbb1567aa4d94623a60e72b89664faaa.jpg
+2020-11-09 10:28:09,482 customer_register.py[line:150] INFO --------------------end:上传身份证反面----------------
+2020-11-09 10:28:09,483 customer_register.py[line:159] INFO ------start:上传手持身份证-----------
+2020-11-09 10:28:09,483 customer_register.py[line:173] INFO url:http://47.112.191.144:8180/tpos-api-web-srv/api_007
+2020-11-09 10:28:09,483 customer_register.py[line:174] INFO data:{"HEAD": {"MAC": "F932E16F-D688-49FC-BC2B-D21A3A6A2C2B", "TYPE": "1", "VERSION": "100", "IP": "10.10.47.25", "TOKEN": "vqtQipq6K72Hw9NZf6DQoqnlGGub5U4qpZBCjQeal3Po+P7eYbwGmVR1yuxxDBbVE6xmrTGcWdWsUWNiSEWCFg==", "ACCOUNT_TYPE": "1"}, "BODY": {"id": 32, "bizType": "idImg", "imageType": 3, "accountType": "1"}}
+2020-11-09 10:28:09,890 customer_register.py[line:177] INFO respons:{"HEAD":{"MSG":"操作成功","CODE":"000"},"BODY":{"imgPath":"http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/4a8102ce0fc74582ad69013f7a933f72.jpg"}}
+2020-11-09 10:28:09,890 customer_register.py[line:180] INFO return:http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/4a8102ce0fc74582ad69013f7a933f72.jpg
+2020-11-09 10:28:09,890 customer_register.py[line:181] INFO --------------------end:上传手持身份证----------------
+2020-11-09 10:28:09,890 customer_register.py[line:189] INFO ------start:身份信息确认-----------
+2020-11-09 10:28:09,892 customer_register.py[line:209] INFO url:http://47.112.191.144:8180/tpos-api-web-srv/api_161
+2020-11-09 10:28:09,892 customer_register.py[line:210] INFO requests:{"HEAD": {"MAC": "F932E16F-D688-49FC-BC2B-D21A3A6A2C2B", "TYPE": "2", "VERSION": "100", "IP": "10.10.47.25", "TOKEN": "vqtQipq6K72Hw9NZf6DQor15cjcpQkXcw9Gxw6ZkulNrIRRQiLpTDOb6RZ4WlAR99ZQIFTEC1rGvbAJXmNzwCq2TVChqBu5NnIhNel20LwE=", "ACCOUNT_TYPE": "1"}, "BODY": {"realName": "\u845b\u66e9\u8bf5", "expiryDateEnd": "20391026", "address": "\u5c71\u897f\u7701\u6cb3\u6d25\u5e02\u4e16\u7eaa\u82b1\u56ed1\u5355\u5143101", "holdPath": "http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/4a8102ce0fc74582ad69013f7a933f72.jpg", "frontPath": "http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/8ba4228ea5c94e6997d0e9da98c1edad.jpg", "backPath": "http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/dbb1567aa4d94623a60e72b89664faaa.jpg", "idCard": "142703199110176268", "expiryDateBegin": "20191026", "id": 32}}
+2020-11-09 10:28:10,095 customer_register.py[line:212] INFO result:{"HEAD":{"MSG":"操作成功","CODE":"000"},"BODY":{"agreementState":1,"count":1}}
+2020-11-09 10:28:10,095 customer_register.py[line:214] INFO -----------------end:身份确认完成----------------
+2020-11-09 10:28:10,095 customer_register.py[line:228] INFO ------------------------start:银行卡图片上传---------------------
+2020-11-09 10:28:10,096 customer_register.py[line:239] INFO data:{"HEAD": {"MAC": "F932E16F-D688-49FC-BC2B-D21A3A6A2C2B", "TYPE": "1", "VERSION": "100", "IP": "10.10.47.25", "TOKEN": "vqtQipq6K72Hw9NZf6DQoqnlGGub5U4qpZBCjQeal3Po+P7eYbwGmVR1yuxxDBbVE6xmrTGcWdWsUWNiSEWCFg==", "ACCOUNT_TYPE": "1"}, "BODY": {"bizType": "stCard", "id": "vqtQipq6K72Hw9NZf6DQor15cjcpQkXcw9Gxw6ZkulNrIRRQiLpTDOb6RZ4WlAR99ZQIFTEC1rGvbAJXmNzwCq2TVChqBu5NnIhNel20LwE="}}
+2020-11-09 10:28:10,404 customer_register.py[line:245] INFO respons:{"HEAD":{"MSG":"操作成功","CODE":"000"},"BODY":{"imgPath":"http://10.88.133.156:8080/tpos-api-web-srv/api_078//mnt/realname/image/tpos/customer/2020/11/9/vqtQipq6K72Hw9NZf6DQor15cjcpQkXcw9Gxw6ZkulNrIRRQiLpTDOb6RZ4WlAR99ZQIFTEC1rGvbAJXmNzwCq2TVChqBu5NnIhNel20LwE=/cfb6e919377d46a59aff93f558c6966b.jpg"}}
+2020-11-09 10:28:10,405 customer_register.py[line:246] INFO ---------------------end:银行卡图片上传---------------------
+2020-11-09 10:28:10,405 customer_register.py[line:264] INFO ----------------------start：添加银行卡确认-------------------
+2020-11-09 10:28:10,405 customer_register.py[line:289] INFO data:{"HEAD": {"MAC": "F932E16F-D688-49FC-BC2B-D21A3A6A2C2B", "TYPE": "2", "VERSION": "100", "IP": "10.10.47.25", "TOKEN": "vqtQipq6K72Hw9NZf6DQor15cjcpQkXcw9Gxw6ZkulNrIRRQiLpTDOb6RZ4WlAR99ZQIFTEC1rGvbAJXmNzwCq2TVChqBu5NnIhNel20LwE=", "ACCOUNT_TYPE": "1"}, "BODY": {"code": "6666", "codeType": 3, "accountName": "\u845b\u66e9\u8bf5", "idCard": "142703199110176268", "accountType": 1, "bankMobile": "15600000033", "type": "1", "realName": "\u845b\u66e9\u8bf5", "isPublicAcc": "0", "bankbranchName": "\u4e2d\u56fd\u5efa\u8bbe\u94f6\u884c\u80a1\u4efd\u6709\u9650\u516c\u53f8\u5317\u4eac\u5e73\u8c37\u65b0\u5f00\u8857\u652f\u884c", "tposBankFrontPath": "http://10.88.133.156:8080/tpos-api-web-srv/api_078//mnt/realname/image/tpos/customer/2020/11/9/vqtQipq6K72Hw9NZf6DQor15cjcpQkXcw9Gxw6ZkulNrIRRQiLpTDOb6RZ4WlAR99ZQIFTEC1rGvbAJXmNzwCq2TVChqBu5NnIhNel20LwE=/cfb6e919377d46a59aff93f558c6966b.jpg", "id": 32, "account": "6217000360003085371", "paybankNo": "105100031442"}}
+2020-11-09 10:28:10,608 customer_register.py[line:291] INFO respons:{"HEAD":{"MSG":"操作成功","CODE":"000"},"BODY":{"bankState":10}}
+2020-11-09 10:28:10,609 customer_register.py[line:292] INFO ----------------end:添加银行卡确认-----------------------
+2020-11-09 10:28:10,609 customer_register.py[line:306] INFO ----------------start：确认函图片上传
+2020-11-09 10:28:10,609 customer_register.py[line:314] INFO respons:{"HEAD": {"MAC": "F932E16F-D688-49FC-BC2B-D21A3A6A2C2B", "TYPE": "2", "VERSION": "100", "IP": "10.10.47.25", "TOKEN": "vqtQipq6K72Hw9NZf6DQor15cjcpQkXcw9Gxw6ZkulNrIRRQiLpTDOb6RZ4WlAR99ZQIFTEC1rGvbAJXmNzwCq2TVChqBu5NnIhNel20LwE=", "ACCOUNT_TYPE": "1"}, "BODY": {"bizType": "csAuth", "accountType": "1", "id": 32, "imageType": "7"}}
+2020-11-09 10:28:11,400 customer_register.py[line:321] INFO respons:{"HEAD":{"MSG":"操作成功","CODE":"000"},"BODY":{"imgPath":"http://10.88.133.156:8080/tpos-api-web-srv/api_078//mnt/realname/image/tpos/customer/2020/11/9/32/3f6f36aac86345049870b16077609aef.jpg"}}
+2020-11-09 10:28:11,401 customer_register.py[line:324] INFO ---------------------end:确认函图片上传---------------------
+2020-11-09 10:28:11,401 customer_register.py[line:325] INFO return:http://10.88.133.156:8080/tpos-api-web-srv/api_078//mnt/realname/image/tpos/customer/2020/11/9/32/3f6f36aac86345049870b16077609aef.jpg
+2020-11-09 10:28:11,401 customer_register.py[line:331] INFO ----------------start:完善商户信息-------------------
+2020-11-09 10:28:11,402 customer_register.py[line:351] INFO data:{"HEAD": {"MAC": "F932E16F-D688-49FC-BC2B-D21A3A6A2C2B", "TYPE": "2", "VERSION": "100", "IP": "10.10.47.25", "TOKEN": "vqtQipq6K72Hw9NZf6DQor15cjcpQkXcw9Gxw6ZkulNrIRRQiLpTDOb6RZ4WlAR99ZQIFTEC1rGvbAJXmNzwCq2TVChqBu5NnIhNel20LwE=", "ACCOUNT_TYPE": "1"}, "BODY": {"mercAreaId": "5211", "accountType": "1", "mercCityId": "5210", "manageInfoPath": "http://10.88.133.156:8080/tpos-api-web-srv/api_078//mnt/realname/image/tpos/customer/2020/11/9/32/3f6f36aac86345049870b16077609aef.jpg", "type": "1", "merShortName": "\u4fde\u52e4\u6710\u6709\u9650\u8d23\u4efb\u516c\u53f8", "mccCode": "5462", "mercFullName": "\u7eaa\u8247\u62da\u6709\u9650\u8d23\u4efb\u516c\u53f8", "whetherBusiness": "2", "id": 32, "mercAddress": "\u9655\u897f\u7701\u897f\u5b89\u5e02\u5e94\u4eba\u77f3\u6751", "mercProvId": "5200", "manageInfoState": "10"}}
+2020-11-09 10:28:11,781 customer_register.py[line:353] INFO respons:{"HEAD":{"MSG":"操作成功","CODE":"000"},"BODY":null}
+2020-11-09 10:28:11,782 customer_register.py[line:354] INFO ---------------------end:完善商户信息---------------------
+2020-11-09 10:28:11,782 customer_register.py[line:364] INFO -------------start：修改商户审核状态----------------------
+2020-11-09 10:28:11,783 customer_register.py[line:367] INFO 修改商户为：15600000033
+2020-11-09 10:28:34,192 customer_register.py[line:65] INFO ----------------start:商户登录------------------------
+2020-11-09 10:28:34,192 customer_register.py[line:69] INFO 请求地址：http://47.112.191.144:8180/tpos-api-web-srv/api_004
+2020-11-09 10:28:34,192 customer_register.py[line:72] INFO 请求参数：{"HEAD": {"MAC": "F932E16F-D688-49FC-BC2B-D21A3A6A2C2B", "TYPE": "1", "VERSION": "100", "IP": "10.10.47.25", "TOKEN": "vqtQipq6K72Hw9NZf6DQoqnlGGub5U4qpZBCjQeal3Po+P7eYbwGmVR1yuxxDBbVE6xmrTGcWdWsUWNiSEWCFg==", "ACCOUNT_TYPE": "1"}, "BODY": {"password": "123456", "accountType": "1", "mobile": "15600000033"}}
+2020-11-09 10:28:34,449 customer_register.py[line:75] INFO ----------------end:返回值------------------------
+2020-11-09 10:28:34,450 customer_register.py[line:76] INFO {"HEAD":{"MSG":"操作成功","CODE":"000"},"BODY":{"customerInfo":{"customerId":32,"bindState":10,"authState":3,"bankState":10,"actnState":1,"examineState":2,"agreementState":1,"signTime":"20201027","policyId":0,"mobile":"15600000033","realName":"葛曩诵","idCard":"142703199110176268","pendIncome":0,"depositAmount":null},"token":"vqtQipq6K72Hw9NZf6DQor15cjcpQkXcw9Gxw6ZkulNrIRRQiLpTDOb6RZ4WlAR99ZQIFTEC1rGvbAJXmNzwCq2TVChqBu5NTzH5tHlmiTE=","isVip":false,"isBuyVip":false}}
+2020-11-09 10:28:34,450 customer_register.py[line:83] INFO ----------------end:登录成功------------------------
+2020-11-09 10:28:34,450 customer_register.py[line:92] INFO ------start:上传身份证正面-----------
+2020-11-09 10:28:34,450 customer_register.py[line:108] INFO url:http://47.112.191.144:8180/tpos-api-web-srv/api_007
+2020-11-09 10:28:34,450 customer_register.py[line:109] INFO data:{"HEAD": {"MAC": "F932E16F-D688-49FC-BC2B-D21A3A6A2C2B", "TYPE": "1", "VERSION": "100", "IP": "10.10.47.25", "TOKEN": "vqtQipq6K72Hw9NZf6DQoqnlGGub5U4qpZBCjQeal3Po+P7eYbwGmVR1yuxxDBbVE6xmrTGcWdWsUWNiSEWCFg==", "ACCOUNT_TYPE": "1"}, "BODY": {"id": 32, "bizType": "idImg", "imageType": "1"}}
+2020-11-09 10:28:34,670 customer_register.py[line:114] INFO respons:{"HEAD":{"MSG":"操作成功","CODE":"000"},"BODY":{"imgPath":"http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/7dc174480b84412da9724b786aa0351c.jpg"}}
+2020-11-09 10:28:34,670 customer_register.py[line:117] INFO return:http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/7dc174480b84412da9724b786aa0351c.jpg
+2020-11-09 10:28:34,670 customer_register.py[line:118] INFO --------------------end:上传身份证正面----------------
+2020-11-09 10:28:34,670 customer_register.py[line:127] INFO ------start:上传身份证反面-----------
+2020-11-09 10:28:34,670 customer_register.py[line:141] INFO url:http://47.112.191.144:8180/tpos-api-web-srv/api_007
+2020-11-09 10:28:34,670 customer_register.py[line:142] INFO data:{"HEAD": {"MAC": "F932E16F-D688-49FC-BC2B-D21A3A6A2C2B", "TYPE": "1", "VERSION": "100", "IP": "10.10.47.25", "TOKEN": "vqtQipq6K72Hw9NZf6DQoqnlGGub5U4qpZBCjQeal3Po+P7eYbwGmVR1yuxxDBbVE6xmrTGcWdWsUWNiSEWCFg==", "ACCOUNT_TYPE": "1"}, "BODY": {"id": 32, "bizType": "idImg", "imageType": 2, "accountType": "1"}}
+2020-11-09 10:28:34,976 customer_register.py[line:146] INFO respons:{"HEAD":{"MSG":"操作成功","CODE":"000"},"BODY":{"imgPath":"http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/c2182e1348db4ce493ad57cae08aa8f6.jpg"}}
+2020-11-09 10:28:34,976 customer_register.py[line:149] INFO return:http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/c2182e1348db4ce493ad57cae08aa8f6.jpg
+2020-11-09 10:28:34,976 customer_register.py[line:150] INFO --------------------end:上传身份证反面----------------
+2020-11-09 10:28:34,976 customer_register.py[line:159] INFO ------start:上传手持身份证-----------
+2020-11-09 10:28:34,977 customer_register.py[line:173] INFO url:http://47.112.191.144:8180/tpos-api-web-srv/api_007
+2020-11-09 10:28:34,977 customer_register.py[line:174] INFO data:{"HEAD": {"MAC": "F932E16F-D688-49FC-BC2B-D21A3A6A2C2B", "TYPE": "1", "VERSION": "100", "IP": "10.10.47.25", "TOKEN": "vqtQipq6K72Hw9NZf6DQoqnlGGub5U4qpZBCjQeal3Po+P7eYbwGmVR1yuxxDBbVE6xmrTGcWdWsUWNiSEWCFg==", "ACCOUNT_TYPE": "1"}, "BODY": {"id": 32, "bizType": "idImg", "imageType": 3, "accountType": "1"}}
+2020-11-09 10:28:35,489 customer_register.py[line:177] INFO respons:{"HEAD":{"MSG":"操作成功","CODE":"000"},"BODY":{"imgPath":"http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/e36906302a8e425fb44a12c52c3f3213.jpg"}}
+2020-11-09 10:28:35,490 customer_register.py[line:180] INFO return:http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/e36906302a8e425fb44a12c52c3f3213.jpg
+2020-11-09 10:28:35,490 customer_register.py[line:181] INFO --------------------end:上传手持身份证----------------
+2020-11-09 10:28:35,490 customer_register.py[line:189] INFO ------start:身份信息确认-----------
+2020-11-09 10:28:35,492 customer_register.py[line:209] INFO url:http://47.112.191.144:8180/tpos-api-web-srv/api_161
+2020-11-09 10:28:35,492 customer_register.py[line:210] INFO requests:{"HEAD": {"MAC": "F932E16F-D688-49FC-BC2B-D21A3A6A2C2B", "TYPE": "2", "VERSION": "100", "IP": "10.10.47.25", "TOKEN": "vqtQipq6K72Hw9NZf6DQor15cjcpQkXcw9Gxw6ZkulNrIRRQiLpTDOb6RZ4WlAR99ZQIFTEC1rGvbAJXmNzwCq2TVChqBu5NTzH5tHlmiTE=", "ACCOUNT_TYPE": "1"}, "BODY": {"realName": "\u4f59\u516c\u80ce", "expiryDateEnd": "20391026", "address": "\u5c71\u897f\u7701\u6cb3\u6d25\u5e02\u4e16\u7eaa\u82b1\u56ed1\u5355\u5143101", "holdPath": "http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/e36906302a8e425fb44a12c52c3f3213.jpg", "frontPath": "http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/7dc174480b84412da9724b786aa0351c.jpg", "backPath": "http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/c2182e1348db4ce493ad57cae08aa8f6.jpg", "idCard": "142703199110178835", "expiryDateBegin": "20191026", "id": 32}}
+2020-11-09 10:28:35,696 customer_register.py[line:212] INFO result:{"HEAD":{"MSG":"操作成功","CODE":"000"},"BODY":{"agreementState":1,"count":1}}
+2020-11-09 10:28:35,696 customer_register.py[line:214] INFO -----------------end:身份确认完成----------------
+2020-11-09 10:28:35,697 customer_register.py[line:228] INFO ------------------------start:银行卡图片上传---------------------
+2020-11-09 10:28:35,697 customer_register.py[line:239] INFO data:{"HEAD": {"MAC": "F932E16F-D688-49FC-BC2B-D21A3A6A2C2B", "TYPE": "1", "VERSION": "100", "IP": "10.10.47.25", "TOKEN": "vqtQipq6K72Hw9NZf6DQoqnlGGub5U4qpZBCjQeal3Po+P7eYbwGmVR1yuxxDBbVE6xmrTGcWdWsUWNiSEWCFg==", "ACCOUNT_TYPE": "1"}, "BODY": {"bizType": "stCard", "id": "vqtQipq6K72Hw9NZf6DQor15cjcpQkXcw9Gxw6ZkulNrIRRQiLpTDOb6RZ4WlAR99ZQIFTEC1rGvbAJXmNzwCq2TVChqBu5NTzH5tHlmiTE="}}
+2020-11-09 10:28:36,209 customer_register.py[line:245] INFO respons:{"HEAD":{"MSG":"操作成功","CODE":"000"},"BODY":{"imgPath":"http://10.88.133.156:8080/tpos-api-web-srv/api_078//mnt/realname/image/tpos/customer/2020/11/9/vqtQipq6K72Hw9NZf6DQor15cjcpQkXcw9Gxw6ZkulNrIRRQiLpTDOb6RZ4WlAR99ZQIFTEC1rGvbAJXmNzwCq2TVChqBu5NTzH5tHlmiTE=/c28f1d11ac59448f88ffdb5a971b3fa8.jpg"}}
+2020-11-09 10:28:36,210 customer_register.py[line:246] INFO ---------------------end:银行卡图片上传---------------------
+2020-11-09 10:28:36,210 customer_register.py[line:264] INFO ----------------------start：添加银行卡确认-------------------
+2020-11-09 10:28:36,211 customer_register.py[line:289] INFO data:{"HEAD": {"MAC": "F932E16F-D688-49FC-BC2B-D21A3A6A2C2B", "TYPE": "2", "VERSION": "100", "IP": "10.10.47.25", "TOKEN": "vqtQipq6K72Hw9NZf6DQor15cjcpQkXcw9Gxw6ZkulNrIRRQiLpTDOb6RZ4WlAR99ZQIFTEC1rGvbAJXmNzwCq2TVChqBu5NTzH5tHlmiTE=", "ACCOUNT_TYPE": "1"}, "BODY": {"code": "6666", "codeType": 3, "accountName": "\u4f59\u516c\u80ce", "idCard": "142703199110178835", "accountType": 1, "bankMobile": "15600000033", "type": "1", "realName": "\u4f59\u516c\u80ce", "isPublicAcc": "0", "bankbranchName": "\u4e2d\u56fd\u5efa\u8bbe\u94f6\u884c\u80a1\u4efd\u6709\u9650\u516c\u53f8\u5317\u4eac\u5e73\u8c37\u65b0\u5f00\u8857\u652f\u884c", "tposBankFrontPath": "http://10.88.133.156:8080/tpos-api-web-srv/api_078//mnt/realname/image/tpos/customer/2020/11/9/vqtQipq6K72Hw9NZf6DQor15cjcpQkXcw9Gxw6ZkulNrIRRQiLpTDOb6RZ4WlAR99ZQIFTEC1rGvbAJXmNzwCq2TVChqBu5NTzH5tHlmiTE=/c28f1d11ac59448f88ffdb5a971b3fa8.jpg", "id": 32, "account": "6217000360003083041", "paybankNo": "105100031442"}}
+2020-11-09 10:28:36,420 customer_register.py[line:291] INFO respons:{"HEAD":{"MSG":"操作成功","CODE":"000"},"BODY":{"bankState":10}}
+2020-11-09 10:28:36,421 customer_register.py[line:292] INFO ----------------end:添加银行卡确认-----------------------
+2020-11-09 10:28:36,422 customer_register.py[line:306] INFO ----------------start：确认函图片上传
+2020-11-09 10:28:36,423 customer_register.py[line:314] INFO respons:{"HEAD": {"MAC": "F932E16F-D688-49FC-BC2B-D21A3A6A2C2B", "TYPE": "2", "VERSION": "100", "IP": "10.10.47.25", "TOKEN": "vqtQipq6K72Hw9NZf6DQor15cjcpQkXcw9Gxw6ZkulNrIRRQiLpTDOb6RZ4WlAR99ZQIFTEC1rGvbAJXmNzwCq2TVChqBu5NTzH5tHlmiTE=", "ACCOUNT_TYPE": "1"}, "BODY": {"bizType": "csAuth", "accountType": "1", "id": 32, "imageType": "7"}}
+2020-11-09 10:28:37,628 customer_register.py[line:321] INFO respons:{"HEAD":{"MSG":"操作成功","CODE":"000"},"BODY":{"imgPath":"http://10.88.133.156:8080/tpos-api-web-srv/api_078//mnt/realname/image/tpos/customer/2020/11/9/32/047a740bb8c348e88cfd2b0a0626fe6a.jpg"}}
+2020-11-09 10:28:37,629 customer_register.py[line:324] INFO ---------------------end:确认函图片上传---------------------
+2020-11-09 10:28:37,630 customer_register.py[line:325] INFO return:http://10.88.133.156:8080/tpos-api-web-srv/api_078//mnt/realname/image/tpos/customer/2020/11/9/32/047a740bb8c348e88cfd2b0a0626fe6a.jpg
+2020-11-09 10:28:37,631 customer_register.py[line:331] INFO ----------------start:完善商户信息-------------------
+2020-11-09 10:28:37,632 customer_register.py[line:351] INFO data:{"HEAD": {"MAC": "F932E16F-D688-49FC-BC2B-D21A3A6A2C2B", "TYPE": "2", "VERSION": "100", "IP": "10.10.47.25", "TOKEN": "vqtQipq6K72Hw9NZf6DQor15cjcpQkXcw9Gxw6ZkulNrIRRQiLpTDOb6RZ4WlAR99ZQIFTEC1rGvbAJXmNzwCq2TVChqBu5NTzH5tHlmiTE=", "ACCOUNT_TYPE": "1"}, "BODY": {"mercAreaId": "5211", "accountType": "1", "mercCityId": "5210", "manageInfoPath": "http://10.88.133.156:8080/tpos-api-web-srv/api_078//mnt/realname/image/tpos/customer/2020/11/9/32/047a740bb8c348e88cfd2b0a0626fe6a.jpg", "type": "1", "merShortName": "\u7941\u84e5\u6709\u9650\u8d23\u4efb\u516c\u53f8", "mccCode": "5462", "mercFullName": "\u9c8d\u5356\u90d7\u6709\u9650\u8d23\u4efb\u516c\u53f8", "whetherBusiness": "2", "id": 32, "mercAddress": "\u9655\u897f\u7701\u897f\u5b89\u5e02\u5e94\u4eba\u77f3\u6751", "mercProvId": "5200", "manageInfoState": "10"}}
+2020-11-09 10:28:37,759 customer_register.py[line:353] INFO respons:{"HEAD":{"MSG":"操作成功","CODE":"000"},"BODY":null}
+2020-11-09 10:28:37,759 customer_register.py[line:354] INFO ---------------------end:完善商户信息---------------------
+2020-11-09 10:28:37,760 customer_register.py[line:364] INFO -------------start：修改商户审核状态----------------------
+2020-11-09 10:28:37,761 customer_register.py[line:367] INFO 修改商户为：15600000033
+2020-11-09 10:28:38,376 customer_register.py[line:377] INFO -------------------end:商户审核完成---------------------------
+2020-11-09 10:31:46,386 customer_register.py[line:65] INFO ----------------start:商户登录------------------------
+2020-11-09 10:31:46,386 customer_register.py[line:69] INFO 请求地址：http://47.112.191.144:8180/tpos-api-web-srv/api_004
+2020-11-09 10:31:46,387 customer_register.py[line:72] INFO 请求参数：{"HEAD": {"MAC": "F932E16F-D688-49FC-BC2B-D21A3A6A2C2B", "TYPE": "1", "VERSION": "100", "IP": "10.10.47.25", "TOKEN": "vqtQipq6K72Hw9NZf6DQoqnlGGub5U4qpZBCjQeal3Po+P7eYbwGmVR1yuxxDBbVE6xmrTGcWdWsUWNiSEWCFg==", "ACCOUNT_TYPE": "1"}, "BODY": {"password": "123456", "accountType": "1", "mobile": "15600000033"}}
+2020-11-09 10:31:47,690 customer_register.py[line:75] INFO ----------------end:返回值------------------------
+2020-11-09 10:31:47,690 customer_register.py[line:76] INFO {"HEAD":{"MSG":"操作成功","CODE":"000"},"BODY":{"customerInfo":{"customerId":32,"bindState":10,"authState":3,"bankState":10,"actnState":1,"examineState":2,"agreementState":1,"signTime":"20201027","policyId":0,"mobile":"15600000033","realName":"余公胎","idCard":"142703199110178835","pendIncome":0,"depositAmount":null},"token":"vqtQipq6K72Hw9NZf6DQor15cjcpQkXcw9Gxw6ZkulNrIRRQiLpTDOb6RZ4WlAR99ZQIFTEC1rGvbAJXmNzwCq2TVChqBu5NZlRSPVPPYMM=","isVip":false,"isBuyVip":false}}
+2020-11-09 10:31:47,690 customer_register.py[line:83] INFO ----------------end:登录成功------------------------
+2020-11-09 10:31:47,691 customer_register.py[line:92] INFO ------start:上传身份证正面-----------
+2020-11-09 10:31:47,691 customer_register.py[line:108] INFO url:http://47.112.191.144:8180/tpos-api-web-srv/api_007
+2020-11-09 10:31:47,691 customer_register.py[line:109] INFO data:{"HEAD": {"MAC": "F932E16F-D688-49FC-BC2B-D21A3A6A2C2B", "TYPE": "1", "VERSION": "100", "IP": "10.10.47.25", "TOKEN": "vqtQipq6K72Hw9NZf6DQoqnlGGub5U4qpZBCjQeal3Po+P7eYbwGmVR1yuxxDBbVE6xmrTGcWdWsUWNiSEWCFg==", "ACCOUNT_TYPE": "1"}, "BODY": {"id": 32, "bizType": "idImg", "imageType": "1"}}
+2020-11-09 10:31:54,303 customer_register.py[line:114] INFO respons:{"HEAD":{"MSG":"操作成功","CODE":"000"},"BODY":{"imgPath":"http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/dffcf427df274909bd728f8911803621.jpg"}}
+2020-11-09 10:31:54,303 customer_register.py[line:117] INFO return:http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/dffcf427df274909bd728f8911803621.jpg
+2020-11-09 10:31:54,304 customer_register.py[line:118] INFO --------------------end:上传身份证正面----------------
+2020-11-09 10:31:54,304 customer_register.py[line:127] INFO ------start:上传身份证反面-----------
+2020-11-09 10:31:54,305 customer_register.py[line:141] INFO url:http://47.112.191.144:8180/tpos-api-web-srv/api_007
+2020-11-09 10:31:54,305 customer_register.py[line:142] INFO data:{"HEAD": {"MAC": "F932E16F-D688-49FC-BC2B-D21A3A6A2C2B", "TYPE": "1", "VERSION": "100", "IP": "10.10.47.25", "TOKEN": "vqtQipq6K72Hw9NZf6DQoqnlGGub5U4qpZBCjQeal3Po+P7eYbwGmVR1yuxxDBbVE6xmrTGcWdWsUWNiSEWCFg==", "ACCOUNT_TYPE": "1"}, "BODY": {"id": 32, "bizType": "idImg", "imageType": 2, "accountType": "1"}}
+2020-11-09 10:32:51,498 customer_register.py[line:146] INFO respons:<!doctype html><html lang="en"><head><title>HTTP Status 500 – Internal Server Error</title><style type="text/css">h1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} h2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} h3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} body {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} b {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} p {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;} a {color:black;} a.name {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 500 – Internal Server Error</h1><hr class="line" /><p><b>Type</b> Exception Report</p><p><b>Message</b> Request processing failed; nested exception is java.lang.IllegalStateException: getInputStream() has already been called for this request</p><p><b>Description</b> The server encountered an unexpected condition that prevented it from fulfilling the request.</p><p><b>Exception</b></p><pre>org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.IllegalStateException: getInputStream() has already been called for this request
+	org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982)
+	org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	org.springframework.boot.web.support.ErrorPageFilter.doFilter(ErrorPageFilter.java:108)
+	org.springframework.boot.web.support.ErrorPageFilter.forwardToErrorPage(ErrorPageFilter.java:183)
+	org.springframework.boot.web.support.ErrorPageFilter.handleException(ErrorPageFilter.java:166)
+	org.springframework.boot.web.support.ErrorPageFilter.doFilter(ErrorPageFilter.java:130)
+	org.springframework.boot.web.support.ErrorPageFilter.access$000(ErrorPageFilter.java:59)
+	org.springframework.boot.web.support.ErrorPageFilter$1.doFilterInternal(ErrorPageFilter.java:90)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	org.springframework.boot.web.support.ErrorPageFilter.doFilter(ErrorPageFilter.java:108)
+</pre><p><b>Root Cause</b></p><pre>java.lang.IllegalStateException: getInputStream() has already been called for this request
+	org.apache.catalina.connector.Request.getReader(Request.java:1232)
+	org.apache.catalina.connector.RequestFacade.getReader(RequestFacade.java:504)
+	javax.servlet.ServletRequestWrapper.getReader(ServletRequestWrapper.java:225)
+	com.posp.base.util.RSQ.&lt;init&gt;(RSQ.java:51)
+	com.posp.api.web.srv.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:43)
+	org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:133)
+	org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:962)
+	org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	org.springframework.boot.web.support.ErrorPageFilter.doFilter(ErrorPageFilter.java:108)
+	org.springframework.boot.web.support.ErrorPageFilter.forwardToErrorPage(ErrorPageFilter.java:183)
+	org.springframework.boot.web.support.ErrorPageFilter.handleException(ErrorPageFilter.java:166)
+	org.springframework.boot.web.support.ErrorPageFilter.doFilter(ErrorPageFilter.java:130)
+	org.springframework.boot.web.support.ErrorPageFilter.access$000(ErrorPageFilter.java:59)
+	org.springframework.boot.web.support.ErrorPageFilter$1.doFilterInternal(ErrorPageFilter.java:90)
+	org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	org.springframework.boot.web.support.ErrorPageFilter.doFilter(ErrorPageFilter.java:108)
+</pre><p><b>Note</b> The full stack trace of the root cause is available in the server logs.</p><hr class="line" /><h3>Apache Tomcat/8.5.30</h3></body></html>
+2020-11-09 10:34:04,176 customer_register.py[line:364] INFO -------------start：修改商户审核状态----------------------
+2020-11-09 10:34:04,176 customer_register.py[line:367] INFO 修改商户为：15600000033
+2020-11-09 10:35:42,271 customer_register.py[line:364] INFO -------------start：修改商户审核状态----------------------
+2020-11-09 10:35:42,272 customer_register.py[line:367] INFO 修改商户为：15600000033
+2020-11-09 10:36:11,582 customer_register.py[line:377] INFO -------------------end:商户审核完成---------------------------
+2020-11-09 10:59:37,153 customer_register.py[line:364] INFO -------------start：修改商户审核状态----------------------
+2020-11-09 10:59:37,154 customer_register.py[line:367] INFO 修改商户为：15600000033
+2020-11-09 10:59:39,697 customer_register.py[line:377] INFO -------------------end:商户审核完成---------------------------
+2020-11-09 11:03:36,651 customer_register.py[line:364] INFO -------------start：修改商户审核状态----------------------
+2020-11-09 11:03:36,651 customer_register.py[line:367] INFO 修改商户为：15600000033
+2020-11-09 11:03:37,918 customer_register.py[line:377] INFO -------------------end:商户审核完成---------------------------
+2020-11-09 11:11:48,756 customer_register.py[line:364] INFO -------------start：修改商户审核状态----------------------
+2020-11-09 11:11:48,757 customer_register.py[line:367] INFO 修改商户为：15600000033
+2020-11-09 11:11:50,997 customer_register.py[line:377] INFO -------------------end:商户审核完成---------------------------
+2020-11-09 11:15:43,469 customer_register.py[line:364] INFO -------------start：修改商户审核状态----------------------
+2020-11-09 11:15:43,469 customer_register.py[line:367] INFO 修改商户为：15600000033
+2020-11-09 11:16:05,897 customer_register.py[line:364] INFO -------------start：修改商户审核状态----------------------
+2020-11-09 11:16:05,897 customer_register.py[line:367] INFO 修改商户为：15600000033
+2020-11-09 11:16:07,105 customer_register.py[line:372] INFO (32, '15600000033', '163850f1384fd2f33fa8a90297629446a274351c99e1ac3d', 1, 0, 0, None, 3, 10, 1, '???', '142703199110178835', 1, '19911017', 0, 0, 0, '??????????1??101', 'http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/7dc174480b84412da9724b786aa0351c.jpg', 'http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/c2182e1348db4ce493ad57cae08aa8f6.jpg', 'http://47.112.191.144:8180/tpos-api-web-srv/api_080/mnt/realname/image/tpos/customer/2020/11/9/32/e36906302a8e425fb44a12c52c3f3213.jpg', None, None, None, 0, '61416422426764D', 1, '????', 'C_32', '20201027151247', 'C_32', '20201109102837', None, 0, None, None, 0, 10, 2, None, '20201027', 1, 'http://10.88.133.156:8080/tpos-api-web-srv/api_078//mnt/realname/image/tpos/customer/2020/11/9/32/dffcf427df274909bd728f8911803621.jpg', 'http://10.88.133.156:8080/tpos-api-web-srv/api_078//mnt/realname/image/tpos/customer/2020/11/9/32/c2182e1348db4ce493ad57cae08aa8f6.jpg', 'http://10.88.133.156:8080/tpos-api-web-srv/api_078//mnt/realname/image/tpos/customer/2020/11/9/32/e36906302a8e425fb44a12c52c3f3213.jpg', None, 1, '20191026', '20391026', None, None, None, 0, 0, None, None)
+2020-11-09 11:16:07,306 customer_register.py[line:379] INFO -------------------end:商户审核完成---------------------------
+2020-11-09 11:16:54,506 customer_register.py[line:364] INFO -------------start：修改商户审核状态----------------------
+2020-11-09 11:16:54,507 customer_register.py[line:367] INFO 修改商户为：15600000033
+2020-11-09 11:16:56,056 customer_register.py[line:372] INFO (2,)
+2020-11-09 11:16:56,254 customer_register.py[line:379] INFO -------------------end:商户审核完成---------------------------
+2020-11-09 11:24:33,066 customer_register.py[line:364] INFO -------------start：修改商户审核状态----------------------
+2020-11-09 11:24:33,066 customer_register.py[line:367] INFO 修改商户为：15600000033
+2020-11-09 11:24:35,135 customer_register.py[line:377] INFO -------------------end:商户审核完成---------------------------
+2020-11-09 11:25:03,486 customer_register.py[line:364] INFO -------------start：修改商户审核状态----------------------
+2020-11-09 11:25:03,487 customer_register.py[line:367] INFO 修改商户为：15600000033
+2020-11-09 11:25:04,892 customer_register.py[line:377] INFO -------------------end:商户审核完成---------------------------

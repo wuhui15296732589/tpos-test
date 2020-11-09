@@ -154,19 +154,7 @@ def URL():
     url = "http://47.112.191.144:8180/tpos-api-web-srv/"
     return url
 
-def Pc_head():
-    '''
-    pc端请求头
-    :return:
-    '''
-    header ={
-	'Content-Type': 'application/json',
-	'User-Agent': 'PostmanRuntime/7.26.3',
-	'Accept': '*/*',
-	'Accept-Encoding': 'gzip, deflate, br'
-	}
 
-    return header
 
 
 def App_head():

@@ -6,7 +6,7 @@ from common import Common
 import  requests,json,os
 import logging
 import logging.config
-
+import cx_Oracle
 
 CON_LOG='../config/log.conf'
 logging.config.fileConfig(CON_LOG)
@@ -355,6 +355,30 @@ def customer_information(token,customerid,electronic_signature_img,):
 
 
 
+def set_customer_examine(mobile):
+    '''
+    商户审核：更改商户审核状态为审核通过
+    :param mobile: 商户手机号
+    :return:
+    '''
+    logging.info('-------------start：修改商户审核状态----------------------')
+
+
+    logging.info('修改商户为：'+mobile)
+    con = cx_Oracle.connect('POSP_ZXB', 'e7749cc', '47.112.231.248:1621/ORCL')
+    cursor = con.cursor()
+    cursor.execute('UPDATE TPOS.CIF_CUSTOMER SET EXAMINE_STATE = 1 WHERE MOBILE =%s' % mobile)
+
+    con.commit()
+
+    cursor.close()
+    con.close()
+
+    logging.info('-------------------end:商户审核完成---------------------------')
+
+
+
+
 if __name__ == '__main__':
     #商户注册
     # resgiter = Customer_register('15600000033')
@@ -364,46 +388,39 @@ if __name__ == '__main__':
 
 
     #商户登录
-    mobile = '15600000033'
-    password = '123456'
-    s = login(mobile,password)
-    #获取登录token跟商户id
+    # mobile = '15600000033'
+    # password = '123456'
+    # s = login(mobile,password)
+    # #获取登录token跟商户id
+    #
+    # customer = s['customerInfo']['customerId']
+    # token = s['token']
+    # #身份证图片正面上传
+    #
+    # img1 = ID_upload_positive(customer)
+    # #身份证图片反面上传
+    #
+    # img2 = ID_upload_back(customer)
+    # #手持身份证照片上传
+    #
+    # img3 = ID_upload_hold(customer)
+    #
+    # #身份信息确认
+    # enter = identity_check(customer,img1,img2,img3,token)
+    # name = enter['realName']
+    # card = enter['idCard']
+    # #银行卡图片上传
+    # bank_img = bank_card_img(token,customer)
+    #
+    # #添加银行卡确认
+    # add_bank_information(token,customer,name,card,mobile,bank_img)
+    #
+    # #确认函
+    # s = electronic_signature(token,customer)
+    #
+    # #完善商户信息
+    # customer_information(token,customer,s)
 
-    customer = s['customerInfo']['customerId']
-    token = s['token']
-    #身份证图片正面上传
-
-    img1 = ID_upload_positive(customer)
-    #身份证图片反面上传
-
-    img2 = ID_upload_back(customer)
-    #手持身份证照片上传
-
-    img3 = ID_upload_hold(customer)
-
-    #身份信息确认
-    enter = identity_check(customer,img1,img2,img3,token)
-    name = enter['realName']
-    card = enter['idCard']
-    #银行卡图片上传
-    bank_img = bank_card_img(token,customer)
-
-    #添加银行卡确认
-    add_bank_information(token,customer,name,card,mobile,bank_img)
-
-    #确认函
-    s = electronic_signature(token,customer)
-
-    #完善商户信息
-    customer_information(token,customer,s)
-
-
-
-
-
-
-
-
-
-
+    #修改商户审核状态
+    set_customer_examine('15600000033')
 
