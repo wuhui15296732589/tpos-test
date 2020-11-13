@@ -1,9 +1,13 @@
 import os
 import codecs
 import configparser
-from datetime import datetime
+
+
 proDir = os.path.split(os.path.realpath(__file__))[0]
 configPath = os.path.join(proDir, "config.ini")
+
+
+
 
 class ReadConfig:
     def __init__(self):
@@ -33,8 +37,11 @@ class ReadConfig:
         value = self.cf.get("DATABASE", name)
         return value
 
+    def get_orcle_db(self,name):
+        value = self.cf.get('orcleDATABASE',name)
+        return value
+
 
 
 if __name__ == '__main__':
-    proDir = os.path.split(os.path.realpath(__file__))[0]
-    print(proDir)
+    pass

@@ -8,6 +8,7 @@
             <sql id = "delete_user">
                 delete * from rs_member_wallet_bill where member_id = %s
             </sql>
+
         </table>
     </database>
 </page>

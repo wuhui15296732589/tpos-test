@@ -1,40 +1,35 @@
-import pymysql
+#!/usr/bin/env python
+#-*- coding:utf-8 -*-
+# Create by HuiWu
+# Create on 2020/11/10
+import cx_Oracle
 from testFile import readConfig as readConfig
-from common.Log import MyLog as Log
-log = Log.get_log()
-logger = log.logger
+from common.Log import MyLog
 localReadConfig = readConfig.ReadConfig()
 
-class MyDB:
-    global host, username, password, port, database, config
-    host = localReadConfig.get_db("host")
-    username = localReadConfig.get_db("username")
-    password = localReadConfig.get_db("password")
-    port = localReadConfig.get_db("port")
-    database = localReadConfig.get_db("database")
-    config = {
-        'host': str(host),
-        'user': username,
-        'passwd': password,
-        'port': int(port),
-        'db': database
-    }
+log = MyLog.get_log()
+logging = log.logger
+
+class MyORDB:
+
 
     def __init__(self):
 
-        self.logger = logger
+        self.logger = logging
         self.db = None
         self.cursor = None
 
     def connectDB(self):
         try:
             # connect to DB
-            self.db = pymysql.connect(**config)
+            self.db = cx_Oracle.connect(localReadConfig.get_orcle_db("username"),localReadConfig.get_orcle_db('password'),localReadConfig.get_orcle_db('host'))
             # create cursor
             self.cursor = self.db.cursor()
             print("Connect DB successfully!")
-        except ConnectionError as ex:
-            self.logger.error(str(ex))
+        except cx_Oracle.DatabaseError as ex:
+            self.logger.info(str(ex))
+
+
 
     def executeSQL(self, sql):
         self.connectDB()
@@ -59,8 +54,7 @@ class MyDB:
 
 
 if __name__ == '__main__':
-    mydb = MyDB()
+    mydb = MyORDB()
     st = mydb.executeSQL('SELECT customer_id FROM t_pos')
     ss = mydb.get_all(st)
     print(ss)
-

@@ -11,7 +11,7 @@ import cx_Oracle
 CON_LOG='../config/log.conf'
 logging.config.fileConfig(CON_LOG)
 logging=logging.getLogger()
-session = requests.Session()
+
 class Customer_register():
     def __init__(self,mobile):
         self.mobile = mobile
@@ -384,9 +384,6 @@ if __name__ == '__main__':
     # resgiter = Customer_register('15600000033')
     # sss = resgiter.code()
     # ddd = resgiter.register()
-
-
-
     #商户登录
     # mobile = '15600000033'
     # password = '123456'
@@ -420,7 +417,6 @@ if __name__ == '__main__':
     #
     # #完善商户信息
     # customer_information(token,customer,s)
-
     #修改商户审核状态
     set_customer_examine('15600000033')
 

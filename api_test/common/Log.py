@@ -1,3 +1,8 @@
+#!/usr/bin/env python
+#-*- coding:utf-8 -*-
+# Create by HuiWu
+# Create on 2020/9/28
+
 import logging,os
 from datetime import datetime
 import threading
@@ -29,6 +34,7 @@ class Log:
         handler.setFormatter(formatter)
         # add handler
         self.logger.addHandler(handler)
+
 
 
 class MyLog:

@@ -8,10 +8,10 @@ from common import Common
 from decimal import Decimal
 url = 'http://47.112.191.144:8180/tpos-api-web-srv/api_075'
 amount1 = 9900             #交易金额（分）
-rate1 = 0                #交易费率（%）
-defee = 0                 #单笔手续费（分）
-merchantCode = '18158893517998D'                    #商户号
-terminalSn = '20201010000111001042'                 #sn号
+rate1 = 0.57                #交易费率（%）
+defee = 300                 #单笔手续费（分）
+merchantCode = '84319185499000A'                    #商户号
+terminalSn = '00005702251070000013'                 #sn号
 activityId = 'H0422'                                 #押金类型（H0421 = 39     H0441 = 69      H0422 = 99      H0423 = 139）(押金类型对应交易金额则为押金支付交易)
 voucherId =''                                       #sim扣费（MKA_0024），不填为不扣费
 voucherFee = ''                                   #sim扣费金额：3600，不填为不扣费
