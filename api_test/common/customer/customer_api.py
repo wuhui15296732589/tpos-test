@@ -36,5 +36,5 @@ def code(data):
 
 
 if __name__ == '__main__':
-    s = code({'type':'1','mobile':'13400000034'})
+    s = code({'type':'1','mobile':'1340000003'})
     print(s)

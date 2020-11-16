@@ -22,7 +22,9 @@ class MyORDB:
     def connectDB(self):
         try:
             # connect to DB
-            self.db = cx_Oracle.connect(localReadConfig.get_orcle_db("username"),localReadConfig.get_orcle_db('password'),localReadConfig.get_orcle_db('host'))
+            self.db = cx_Oracle.connect(localReadConfig.get_orcle_db("username"),
+                                        localReadConfig.get_orcle_db('password'),
+                                        localReadConfig.get_orcle_db('host'))
             # create cursor
             self.cursor = self.db.cursor()
             print("Connect DB successfully!")

@@ -244,4 +244,5 @@ def APP_headers():
 
 
 if __name__ == '__main__':
-   logger.logger.info('000000000000000000000000000')
+    s = get_xls('testCase.xls', 'register')
+    print(s)

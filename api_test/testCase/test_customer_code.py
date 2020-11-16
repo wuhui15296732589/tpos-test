@@ -1,13 +1,30 @@
+#!/usr/bin/env python
+#-*- coding:utf-8 -*-
+# Create by HuiWu
+# @Time : 2020/11/10 23:00
+
 from testCase.myunit import StartEnd
 from common import common_public
-
+from common.customer import customer_api
+from common.Log import MyLog
+import unittest
+log = MyLog.get_log()
+logging = log.logger
 
 s = common_public.get_xls('testCase.xls','register')
 
 class test_customer_code(StartEnd):
      def test_mobile_less_11(self):
+        u"""手机号不足11位"""
 
-         pass
+        data = s[0][2]
+        result = customer_api.code(data)
+        assert result['HEAD']['MSG'] == '操作shibai'
+
+
+
+
+
 
      def test_mobile_greater_11(self):
          pass
@@ -31,6 +48,4 @@ class test_customer_code(StartEnd):
 
 
 if __name__ == '__main__':
-    s = common_public.get_xls('testCase.xls','register')
-    print(s)
-    print(s[0][2])
+    unittest.main()
