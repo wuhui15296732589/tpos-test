@@ -81,7 +81,7 @@ def send_mail(file_name):
     att["Content-Disposition"] = 'attachment; filename="test_report.html"'
     msg.attach(att)
 
-    #发送邮件
+    #发送邮件（接收人可以设置多个收件人， 用列表形式添加[]）
     try:
         smtp = smtplib.SMTP
         smtp.connect(readconfig.get_email('mail_host'))
