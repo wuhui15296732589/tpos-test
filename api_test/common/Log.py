@@ -29,7 +29,7 @@ class Log:
         # defined handler
         handler = logging.FileHandler(os.path.join(logPath, "output.log"))
         # defined formatter
-        formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+        formatter = logging.Formatter('%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s')
         # defined formatter
         handler.setFormatter(formatter)
         # add handler
