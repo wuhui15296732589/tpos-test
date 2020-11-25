@@ -7,17 +7,17 @@ import requests,json
 from common import Common
 from decimal import Decimal
 url = 'http://47.112.191.144:8180/tpos-api-web-srv/api_075'
-amount1 = 9900             #交易金额（分）
+amount1 = 1000             #交易金额（分）
 rate1 = 0.57                #交易费率（%）
-defee = 300                 #单笔手续费（分）
-merchantCode = '84319185499000A'                    #商户号
-terminalSn = '00005702251070000013'                 #sn号
-activityId = 'H0422'                                 #押金类型（H0421 = 39     H0441 = 69      H0422 = 99      H0423 = 139）(押金类型对应交易金额则为押金支付交易)
+defee = 0                 #单笔手续费（分）
+merchantCode = '28960228891747D'                    #商户号
+terminalSn = '20201111000010090001'                 #sn号
+activityId = ''                                 #押金类型（H0421 = 39     H0441 = 69      H0422 = 99      H0423 = 139）(押金类型对应交易金额则为押金支付交易)
 voucherId =''                                       #sim扣费（MKA_0024），不填为不扣费
 voucherFee = ''                                   #sim扣费金额：3600，不填为不扣费
 payCardAttr = '2'                                 #交易卡类型（1:借记卡 2:贷记卡 3：无卡）
 quickPassPay = '0'                                #交易类型0:普通交易 1：云闪付优惠 2：小额双免优惠
-serverCode = '1003'                               #交易编码交易编码10001：刷卡 10002：微信10003:NFC 10004：支付宝 10005：银联二维码
+serverCode = '10005'                               #交易编码交易编码10001：刷卡 10002：微信10003:NFC 10004：支付宝 10005：银联二维码
 
 headers = {
 	'Content-Type': 'application/json',
