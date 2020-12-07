@@ -9,15 +9,14 @@ from common import Log
 import json
 import random
 
-log = Log.get_log()
-logging = log.logger
+# log = Log.get_log()
+# logging = log.logger
 
 
 class UserBehavior(TaskSet):
     @task(1)
     def test_trans(self):
         url = 'http://47.112.191.144:8180/tpos-api-web-srv/api_075'
-        logging.info('url：' + url)
         amount1 = Common.amount()  # 交易金额（分）
         rate1 = Common.fee()  # 交易费率（%）
         defee = 300  # 单笔手续费（分）
@@ -79,7 +78,7 @@ class UserBehavior(TaskSet):
             "sign":
                 "FVbkZ6ut753ZQ67LjnPU7KQ3k2GRlfa7oZYBhfdxXWbMq61BCYHlBDNm7PBGVViqhUaZIFavPdepmYf1s464F/yF2UFclkM7fyw3PhOAUXUHkkGrdaRQ4Zh6rNzrIdChjvBAEYLw0PaIVLmShnUSS+8OGSqYgytXsY+fY8FATn0="}
         ss = json.dumps(data)
-        logging.info('data:' + ss)
+
         with self.client.post(url, data=ss, headers=headers) as respons:
             result = respons.json()
             if '处理成功' == result['msg']:

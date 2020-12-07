@@ -4,13 +4,15 @@
 # Create on 2020/10/27
 from common import Common
 import  requests,json,os
-import logging
+from common.Log import MyLog
 import logging.config
 import cx_Oracle
 
-CON_LOG='../config/log.conf'
-logging.config.fileConfig(CON_LOG)
-logging=logging.getLogger()
+
+log = MyLog.get_log()
+logging = log.logger
+
+
 
 class Customer_register():
     def __init__(self,mobile):
@@ -25,7 +27,7 @@ class Customer_register():
         url= Common.URL() +'api_002'
         data1 = {"HEAD":Common.App_head(),
                 "BODY":{"type":"1","mobile":self.mobile}}
-        logging.info('请求地址：'+url+','+'请求参数：'+data1)
+
         data = json.dumps(data1)
         respons = requests.post(url = url , data = data)
         assert respons.status_code == 200
@@ -44,8 +46,10 @@ class Customer_register():
                  "BODY":{"code":"6666","password":"123456","mobile":self.mobile,
                          "firPassword":"123456","type":"1","accountType":"1"}}
         logging.info('请求地址：'+url)
-        logging.info('请求参数：'+data1)
+
+
         data = json.dumps(data1)
+        logging.info('请求参数：' + data)
         respons = requests.post(url= url,data = data)
         assert respons.status_code ==200
         logging.info('-----------------end:手机号注册成功----------------------------------')
@@ -71,7 +75,7 @@ def login(mobile,password):
     data = json.dumps(data1)
     logging.info('请求参数：' + data)
 
-    respons = session.post(url=url, data= data)
+    respons = requests.post(url=url, data= data)
     logging.info('----------------end:返回值------------------------')
     logging.info(respons.text)
     assert respons.status_code == 200
@@ -379,44 +383,4 @@ def set_customer_examine(mobile):
 
 
 
-if __name__ == '__main__':
-    #商户注册
-    # resgiter = Customer_register('15600000033')
-    # sss = resgiter.code()
-    # ddd = resgiter.register()
-    #商户登录
-    # mobile = '15600000033'
-    # password = '123456'
-    # s = login(mobile,password)
-    # #获取登录token跟商户id
-    #
-    # customer = s['customerInfo']['customerId']
-    # token = s['token']
-    # #身份证图片正面上传
-    #
-    # img1 = ID_upload_positive(customer)
-    # #身份证图片反面上传
-    #
-    # img2 = ID_upload_back(customer)
-    # #手持身份证照片上传
-    #
-    # img3 = ID_upload_hold(customer)
-    #
-    # #身份信息确认
-    # enter = identity_check(customer,img1,img2,img3,token)
-    # name = enter['realName']
-    # card = enter['idCard']
-    # #银行卡图片上传
-    # bank_img = bank_card_img(token,customer)
-    #
-    # #添加银行卡确认
-    # add_bank_information(token,customer,name,card,mobile,bank_img)
-    #
-    # #确认函
-    # s = electronic_signature(token,customer)
-    #
-    # #完善商户信息
-    # customer_information(token,customer,s)
-    #修改商户审核状态
-    set_customer_examine('15600000033')
 

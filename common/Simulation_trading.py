@@ -6,18 +6,20 @@
 import requests,json
 from common import Common
 from decimal import Decimal
-url = 'http://47.112.191.144:8180/tpos-api-web-srv/api_075'
-amount1 = 1000             #交易金额（分）
-rate1 = 0.57                #交易费率（%）
-defee = 0                 #单笔手续费（分）
-merchantCode = '28960228891747D'                    #商户号
-terminalSn = '20201111000010090001'                 #sn号
-activityId = ''                                 #押金类型（H0421 = 39     H0441 = 69      H0422 = 99      H0423 = 139）(押金类型对应交易金额则为押金支付交易)
+url = 'http://47.112.191.144:8180/tpos-api-web-srv/api_075'             #tpos
+#url='http://47.112.186.194:8180/kpos-api-web-srv/api_075'               #kpos
+
+amount1 = 1000009             #交易金额（分）
+rate1 = 0.58                #交易费率（%）
+defee = 300                 #单笔手续费（分）
+merchantCode = '77910589355309D'                    #商户号
+terminalSn = '20201111000010090003'                 #sn号
+activityId = 'H0441'                                 #押金类型（H0421 = 39     H0441 = 69      H0422 = 99      H0423 = 139）(押金类型对应交易金额则为押金支付交易)
 voucherId =''                                       #sim扣费（MKA_0024），不填为不扣费
 voucherFee = ''                                   #sim扣费金额：3600，不填为不扣费
-payCardAttr = '2'                                 #交易卡类型（1:借记卡 2:贷记卡 3：无卡）
+payCardAttr = '1'                                 #交易卡类型（1:借记卡 2:贷记卡 3：无卡）
 quickPassPay = '0'                                #交易类型0:普通交易 1：云闪付优惠 2：小额双免优惠
-serverCode = '10005'                               #交易编码交易编码10001：刷卡 10002：微信10003:NFC 10004：支付宝 10005：银联二维码
+serverCode = '10001'                               #交易编码交易编码10001：刷卡 10002：微信10003:NFC 10004：支付宝 10005：银联二维码
 
 headers = {
 	'Content-Type': 'application/json',
@@ -31,7 +33,7 @@ data = {
         "addFee":"0",
         "amount":amount1 - int(amount1 * rate1 *0.01) - defee,
         "cardNo":"625809******6046",
-        "d0Rate": str(rate1) +"|0|0|2000|0|0|00",
+        "d0Rate": str(rate1) +"|0|0|1900|0|0|00",
         "dfFee":defee,
         "fee": int(amount1 * rate1 *0.01),
         "merchantCode":str(merchantCode),
@@ -50,7 +52,7 @@ data = {
         "serverCode":serverCode,
         "settleDate":Common.dataTime(),
         "settleType":"D0",
-        "t1Rate":str(rate1) +"|0|0|2000|0|0|00",
+        "t1Rate":str(rate1) +"|0|0|1900|0|0|00",
         "terminalCode":"14192710",
         "terminalSn":terminalSn,
         "tradeAmount":str(amount1),
